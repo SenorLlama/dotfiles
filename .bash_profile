@@ -1,3 +1,7 @@
+# Initialize docker-machine
+eval $(docker-machine env dockerdev)
+export DOCKER_HOST_IP=$(docker-machine ip dockerdev)
+
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
