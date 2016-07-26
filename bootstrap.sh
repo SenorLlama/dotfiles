@@ -13,3 +13,13 @@ brew install gradle
 
 # Install postgress
 brew install postgresql
+
+# Install GraphViz
+brew install graphviz
+
+# Install jq
+brew install jq
+
+# intall npm and essentials
+brew install npm
+npm install -g gulp
