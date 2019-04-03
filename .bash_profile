@@ -14,6 +14,12 @@ export DOWN=~/Downloads
 export DROP=~/Dropbox
 export PROJ=~/projects
 
+# Go Paths
+export GOPATH=$PROJ/go-workspace # don't forget to change your path correctly!
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
+
 # Folder Location Aliases
 alias docs="cd $DOCS"
 alias down="cd $DOWN"

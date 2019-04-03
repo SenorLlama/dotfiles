@@ -1,19 +1,27 @@
 # Install Homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+# Create projects directory and go-workspace
+mkdir -p ~/projects/go-workspace/src ~/projects/go-workspace/pkg ~/projects/go-workspace/bin
+
 brew tap caskroom/versions
 brew cask install java8
 
 # Install Useful libraries
+brew update
 brew install jq
+brew install gdb
 brew install gpg
 brew install gradle
 brew install graphviz
+brew install golang
+brew install tree
 
 # Install apps from App Store
 brew install mas
 mas install 405843582 	# Alfred
 mas install 406056744	# Evernote
+mas install 1043270657	# GIF Keyboard
 mas install 1054607607	# Helium
 mas install 803453959	# Slack
 mas install 1278508951 	# Trello
@@ -34,6 +42,7 @@ brew cask install dropbox
 brew cask install gas-mask
 brew cask install goland
 brew cask install google-chrome
+brew cask install google-cloud-sdk
 brew cask install intellij-idea
 brew cask install iterm2
 brew cask install marvin
@@ -47,6 +56,11 @@ brew cask install sublime-text
 brew cask install transmission
 brew cask install vlc
 
+# Setup ProtoBuf
+brew install prototool
+brew install autoconf
+brew install automake 
+
 # intall npm and essentials
 brew install npm
 npm install -g gulp
@@ -54,3 +68,9 @@ npm install -g gulp
 # Copy repo bash_profile
 cp .bash_profile ~/.bash_profile
 . ~/.bash_profile
+
+# Download common go tools
+go get -u golang.org/x/lint/golint
+go get -u github.com/golang/protobuf/protoc-gen-go
+go get -u github.com/twitchtv/twirp/protoc-gen-twirp
+go get github.com/twitchtv/retool
