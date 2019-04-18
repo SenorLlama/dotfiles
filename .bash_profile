@@ -31,7 +31,12 @@ alias abp=". ~/.bash_profile"
 alias ebp="subl -w ~/.bash_profile && abp"
 alias lsa="ls -a"
 
-# git parser
+# git helpers
+alias gco="git checkout "
+alias gcb="git checkout -b "
+alias gtg="git tag "
+alias gpt="git push origin --tags"
+alias git_clean="git fetch -p && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D"
 function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
 }
@@ -43,5 +48,5 @@ export PS1="\\[$(tput bold)\\]\\[$(tput setaf 3)\\]mjg @ \W \\[$(tput setaf 2)\\
 git config --global --add color.ui true
 git config --global --add color.diff true
 git config --global user.name "Marvin Guerra"
-git config --global user.email guerra.marvin@gmail.com
+git config --global user.email marvin@marvinguerra.com
 git config --global core.editor "subl -w"

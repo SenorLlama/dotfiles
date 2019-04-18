@@ -9,6 +9,8 @@ brew cask install java8
 
 # Install Useful libraries
 brew update
+brew install circleci
+brew install dep
 brew install jq
 brew install gdb
 brew install gpg
@@ -25,6 +27,7 @@ mas install 1043270657	# GIF Keyboard
 mas install 1054607607	# Helium
 mas install 803453959	# Slack
 mas install 1278508951 	# Trello
+mas install 784801555	# OneNote
 mas install 497799835	# Xcode
 
 # Install RVM
@@ -59,7 +62,8 @@ brew cask install vlc
 # Setup ProtoBuf
 brew install prototool
 brew install autoconf
-brew install automake 
+brew install automake
+brew install swift-protobuf 
 
 # intall npm and essentials
 brew install npm
