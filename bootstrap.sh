@@ -22,11 +22,9 @@ brew install tree
 # Install apps from App Store
 brew install mas
 mas install 405843582 	# Alfred
-mas install 406056744	# Evernote
 mas install 1043270657	# GIF Keyboard
 mas install 1054607607	# Helium
 mas install 803453959	# Slack
-mas install 1278508951 	# Trello
 mas install 784801555	# OneNote
 mas install 497799835	# Xcode
 
