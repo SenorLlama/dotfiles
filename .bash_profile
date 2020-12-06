@@ -1,6 +1,19 @@
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
+# Java
+export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
+export JAVA_11_HOME=$(/usr/libexec/java_home -v11)
+
+alias java8='export JAVA_HOME=$JAVA_8_HOME'
+alias java11='export JAVA_HOME=$JAVA_11_HOME'
+java11
+
+# Go 
+export GOPATH=$HOME/go
+export GOROOT="$(brew --prefix golang)/libexec"
+export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
+
 # add local bin to PATH
 export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:/usr/local/sbin
@@ -13,12 +26,6 @@ export DOCS=~/Documents
 export DOWN=~/Downloads
 export DROP=~/Dropbox
 export PROJ=~/projects
-
-# Go Paths
-export GOPATH=$PROJ/go-workspace # don't forget to change your path correctly!
-export GOROOT=/usr/local/opt/go/libexec
-export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:$GOROOT/bin
 
 # Folder Location Aliases
 alias docs="cd $DOCS"
